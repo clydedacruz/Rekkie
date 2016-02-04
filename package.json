@@ -2,7 +2,6 @@
 	"name": "Rekkie",
 	"version": "0.0.1",
 	"description": "Rekkie - a smart travel destination explorer",
-	,
 	"scripts": {
     "start": "node ./bin/www"
   },
