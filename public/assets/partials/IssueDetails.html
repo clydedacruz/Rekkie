@@ -1,0 +1,47 @@
+
+<div class="feed_stacked corgi_feed_well">
+              <div class="feed_item">
+                <div class="feed_body">
+                  <div class="row">
+                    <div class="feed_profile_pic">
+                      <img src="assets/images/corgi.jpg" alt="meta image" class="meta_image" />
+                    </div>
+                    <div class="feed_text">
+                      <h4><a href="./#/issueDetails/{{issue._id}}" > {{issue.title}} </a></h4>
+                      <p>{{issue.description}}</p>
+                    </div>
+                  </div>
+		  <div  class="row">
+				<p>{{issue.user}}</p>
+		</div>
+                </div>
+
+                <hr class="feed_hr">
+                <ul class="chat">
+                        <li class="left clearfix" ng-repeat="comment in issue.comments"><span class="chat-img pull-left" >
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                        </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <strong class="primary-font">{{comment.name}}</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>{{comment.date}}</small>
+                                </div>
+                                <p>
+                                   {{comment.desc}}
+                                </p>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." ng-model="desciption" />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" ng-click="addComment(issue)">
+                                Comment</button>
+                        </span>
+                    </div>
+                </div>
+               
+              </div>
+            </div>

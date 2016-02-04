@@ -1,27 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+   <head>
+      <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Rekkie</title>
+      <!--specify version number and environment -->
+      
+      <link href="css/animate.min.css" rel="stylesheet">
 
-  <head>
-    <title>NodeJS Starter Application</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="stylesheets/style.css">
-  </head>
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
+    <link href="css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+     <link href="mycss/common.css" rel="stylesheet" type="text/css" />
 
-  <body>
-    <table>
-      <tr>
-        <td style= "width:30%;">
-          <img class = "newappIcon" src="images/newapp-icon.png">
-        <td>
-            <h1>Hi there!</h1>
-          <p>Thanks for creating a
-            <span class = "blue">NodeJS Starter Application</span>.
-            Get started by reading our
-            <a href = "https://www.ng.bluemix.net/docs/#starters/nodejs/index.html#nodejs">documentation</a>
-            or use the Start Coding guide under your app in your dashboard.
-    </table>
-  </body>
 
+         <script src="Framework/angular/angular.min.js" type="text/javascript"></script>
+          <script src="Framework/angular/angular-animate.js" type="text/javascript"></script>
+         <script src="Framework/angular/angular-route.min.js" type="text/javascript"></script>
+         <script src="Framework/angular/angular-sanitize.min.js" type="text/javascript"></script>
+         <script src="Framework/angular/textAngular-rangy.min.js" type="text/javascript"></script>
+         <script src="Framework/angular/textAngular-sanitize.min.js" type="text/javascript"></script>
+         <script src="Framework/angular/textAngular.min.js" type="text/javascript"></script>
+         
+
+
+          <script src="config.js" type="text/javascript"></script>        
+
+  <script src="controller/mainController.js" type="text/javascript"></script>
+   <script src="controller/homeController.js" type="text/javascript"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+
+
+<script src="modules/sky.js"></script>
+       <script src="modules/guage.js"></script>
+  
+    <!-- Bootstrap core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="fonts/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom styling plus plugins -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
+    <link href="css/icheck/flat/green.css" rel="stylesheet" />
+    <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/nprogress.js"></script>
+    <script>
+        NProgress.start();
+    </script>
+   </head>
+   <!--  <body class="skin-blue sidebar-mini fixed">
+      <div class="wrapper" ng-app="reportingApp">
+         <div ng-include="'Partials/Shared/Header.html'"></div>
+         <div ng-include="'Partials/Shared/LeftPanel.html'"></div>
+         <div class="container-fluid content-wrapper main-body">
+            <div class="row row-offcanvas row-offcanvas-right">
+               <div ng-view=""></div>
+            </div>
+         
+         </div>
+         
+      </div>
+   </body>-->
+   <body class="nav-md">
+
+    <div class="container body">
+
+
+        <div class="main_container">
+
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Rekkie!</span></a>
+                    </div>
+                    <div class="clearfix"></div>
+
+     
+                    <!-- /menu prile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                       </div>
+                         
+
+                    
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+
+                <div class="nav_menu">
+                    <nav class="" role="navigation">
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
+
+
+                    </nav>
+                </div>
+
+            </div>
+            <!-- /top navigation -->
+
+
+            <!-- page content -->
+          	<div ng-app="rekkie">
+          	<div class="row right_col" role="main">"
+               <div ng-view=""></div>
+            </div>
+          	</div>
+            <!-- /page content -->
+
+        </div>
+
+    </div>
+
+    <div id="custom_notifications" class="custom-notifications dsp_none">
+        <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+        </ul>
+        <div class="clearfix"></div>
+        <div id="notif-group" class="tabbed_notifications"></div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- gauge js -->
+    <script type="text/javascript" src="js/gauge/gauge.min.js"></script>
+
+    <!-- chart js -->
+    <script src="js/chartjs/chart.min.js"></script>
+    <!-- bootstrap progress js -->
+    <script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+    <!-- icheck -->
+    <script src="js/icheck/icheck.min.js"></script>
+    <!-- daterangepicker -->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+
+    <script src="js/custom.js"></script>
+
+    <!-- flot js -->
+    <!--[if lte IE 8]><script type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+    <script type="text/javascript" src="js/flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.orderBars.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.time.min.js"></script>
+    <script type="text/javascript" src="js/flot/date.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.spline.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.stack.js"></script>
+    <script type="text/javascript" src="js/flot/curvedLines.js"></script>
+    <script type="text/javascript" src="js/flot/jquery.flot.resize.js"></script>
+
+
+    <!-- worldmap -->
+    <script type="text/javascript" src="js/maps/jquery-jvectormap-2.0.1.min.js"></script>
+    <script type="text/javascript" src="js/maps/gdp-data.js"></script>
+    <script type="text/javascript" src="js/maps/jquery-jvectormap-world-mill-en.js"></script>
+    <script type="text/javascript" src="js/maps/jquery-jvectormap-us-aea-en.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-1.1.2.min.js"></script>
+
+    <!-- /datepicker -->
+    <!-- /footer content -->
+</body>
 </html>

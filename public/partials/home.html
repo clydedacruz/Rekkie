@@ -1,0 +1,74 @@
+
+
+<div class="" role="main">
+		<div class="row">
+	<div ng-repeat="place in travelList">
+        <div ng-if="place._source.source != 'instagram' ">
+			<div class="col-md-6 col-md-6-offset-1 col-sm-6 col-sm-6-offset-1 col-xs-12">
+				<div class="dashboard_graph">
+
+					<div class="col-md-9 col-sm-9 col-xs-12">
+						<h3>{{place._source.name}}</h3>
+						<div class="product-image">
+							<img ng-src="{{place._source.image}}" alt="..." height="250px" width="400px;" />
+						</div>
+					</div>
+
+					<div class="col-md-3 col-sm-3 col-xs-12 bg-white">
+						<div class="x_title">
+							<h2>Rekkie Score</h2>
+							<div class="clearfix"></div>
+						</div>
+
+						<div class="col-md-12 col-sm-12 col-xs-6">
+							<div>
+								<p>Instagram Campaign</p>
+								<div class="">
+									<uib-progressbar animate="false" value="dynamic" type="success">
+									<b>{{dynamic}}%</b></uib-progressbar>
+								</div>
+							</div>
+							<div>
+								<p>Twitter Campaign</p>
+								<div class="">
+									<uib-progressbar animate="false" value="dynamic" type="success">
+									<b>{{dynamic}}%</b></uib-progressbar>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 col-sm-12 col-xs-6">
+							<div class="sidebar-widget">
+								<h4>Rekkie Meter</h4>
+
+								<div id="preview">
+									<canvas gauge-js width="150" height="80" options="demoOptions"
+										ng-model="demoValue" style="width: 120px; height: 70px;"></canvas>
+									<div id="preview-textfield">{{currentValue}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr color="black">
+
+					<div class="clearfix"></div>
+				</div>
+
+			</div>
+        </div>
+		</div>
+	</div>
+	<!-- footer content -->
+	<footer>
+		<div class="">
+			<p class="pull-right">
+				 <a></a>. | <span
+					class="lead"> <i class="fa fa-paw"></i> Rekkie!
+				</span>
+			</p>
+		</div>
+		<div class="clearfix"></div>
+	</footer>
+	<!-- /footer content -->
+</div>
+
+

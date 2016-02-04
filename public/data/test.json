@@ -1,0 +1,206 @@
+{
+"took": 139
+"timed_out": false
+"_shards": {
+"total": 5
+"successful": 5
+"failed": 0
+}-
+"hits": {
+"total": 251
+"max_score": 1
+"hits": [10]
+0:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnh01aRpANl1Xmyzf"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Chestnut_bob111.JPG/200px-Chestnut_bob111.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Chestnut_bob111.JPG/200px-Chestnut_bob111.JPG%27) 
+"tags": [1]
+0:  "vegetation"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Aldona" (https://en.wikipedia.org/wiki/Aldona%27) 
+"location": {
+"lat": 15.5932711
+"lon": 73.8713099
+}-
+"name": "Aldona"
+}-
+}-
+1:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnh4taRpANl1Xmyzg"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Capparis_zeylanica111.JPG/200px-Capparis_zeylanica111.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Capparis_zeylanica111.JPG/200px-Capparis_zeylanica111.JPG%27) 
+"tags": [5]
+0:  "vegetation"
+1:  "tree"
+2:  "bird"
+3:  "nature"
+4:  "flower"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Aldona" (https://en.wikipedia.org/wiki/Aldona%27) 
+"location": {
+"lat": 15.5932711
+"lon": 73.8713099
+}-
+"name": "Aldona"
+}-
+}-
+2:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnh--aRpANl1Xmyzk"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chapel-Aldona.JPG/200px-Chapel-Aldona.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Chapel-Aldona.JPG/200px-Chapel-Aldona.JPG%27) 
+"tags": [1]
+0:  "nature"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Aldona" (https://en.wikipedia.org/wiki/Aldona%27) 
+"location": {
+"lat": 15.5932711
+"lon": 73.8713099
+}-
+"name": "Aldona"
+}-
+}-
+3:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhniAfaRpANl1Xmyzm"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Antlion11.JPG/200px-Antlion11.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Antlion11.JPG/200px-Antlion11.JPG%27) 
+"tags": [4]
+0:  "vegetation"
+1:  "insect"
+2:  "nature"
+3:  "macro"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Aldona" (https://en.wikipedia.org/wiki/Aldona%27) 
+"location": {
+"lat": 15.5932711
+"lon": 73.8713099
+}-
+"name": "Aldona"
+}-
+}-
+4:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnim3aRpANl1Xmyz7"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Weekend_in_Goa_%283039180337%29.jpg/144px-Weekend_in_Goa_%283039180337%29.jpg" (https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Weekend_in_Goa_%283039180337%29.jpg/144px-Weekend_in_Goa_%283039180337%29.jpg%27) 
+"tags": [1]
+0:  "beach"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Anjuna" (https://en.wikipedia.org/wiki/Anjuna%27) 
+"location": {
+"lat": 15.5809248
+"lon": 73.74484369999999
+}-
+"name": "Anjuna"
+}-
+}-
+5:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnin5aRpANl1Xmyz8"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Anjuna1.jpg/200px-Anjuna1.jpg" (https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Anjuna1.jpg/200px-Anjuna1.jpg%27) 
+"tags": [4]
+0:  "sea"
+1:  "island"
+2:  "beach"
+3:  "mare"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Anjuna" (https://en.wikipedia.org/wiki/Anjuna%27) 
+"location": {
+"lat": 15.5809248
+"lon": 73.74484369999999
+}-
+"name": "Anjuna"
+}-
+}-
+6:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhniyJaRpANl1Xmy0B"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Anjuna_hippie_market_02.JPG/200px-Anjuna_hippie_market_02.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Anjuna_hippie_market_02.JPG/200px-Anjuna_hippie_market_02.JPG%27) 
+"tags": [1]
+0:  "NO_TAGS"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Anjuna" (https://en.wikipedia.org/wiki/Anjuna%27) 
+"location": {
+"lat": 15.5809248
+"lon": 73.74484369999999
+}-
+"name": "Anjuna"
+}-
+}-
+7:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnihDaRpANl1Xmyz1"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Interior_of_St._Thomas_Church_Aldona_%2C_Goa.JPG/200px-Interior_of_St._Thomas_Church_Aldona_%2C_Goa.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Interior_of_St._Thomas_Church_Aldona_%2C_Goa.JPG/200px-Interior_of_St._Thomas_Church_Aldona_%2C_Goa.JPG%27) 
+"tags": [1]
+0:  "church"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/List_of_German_painters" (https://en.wikipedia.org/wiki/List_of_German_painters%27) 
+"location": {
+"lat": 15.5932711
+"lon": 73.8713099
+}-
+"name": "Saint Thomas Church (Aldona)"
+}-
+}-
+8:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnijBaRpANl1Xmyz3"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/St._Thomas_Church_Aldona%2C_grounds_and_band_stand.JPG/200px-St._Thomas_Church_Aldona%2C_grounds_and_band_stand.JPG" (https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/St._Thomas_Church_Aldona%2C_grounds_and_band_stand.JPG/200px-St._Thomas_Church_Aldona%2C_grounds_and_band_stand.JPG%27) 
+"tags": [2]
+0:  "building"
+1:  "church"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/List_of_German_painters" (https://en.wikipedia.org/wiki/List_of_German_painters%27) 
+"location": {
+"lat": 15.5932711
+"lon": 73.8713099
+}-
+"name": "Saint Thomas Church (Aldona)"
+}-
+}-
+9:  {
+"_index": "travel"
+"_type": "place"
+"_id": "AVKhnj1paRpANl1Xmy0c"
+"_score": 1
+"_source": {
+"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Calangute_banner.jpg/200px-Calangute_banner.jpg" (https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Calangute_banner.jpg/200px-Calangute_banner.jpg%27) 
+"tags": [1]
+0:  "NO_TAGS"
+-
+"wikipedia": "https://en.wikipedia.org/wiki/Calangute" (https://en.wikipedia.org/wiki/Calangute%27) 
+"location": {
+"lat": 15.5311237
+"lon": 73.762495
+}-
+"name": "Calangute"
+}-
+}-
+-
+}-
+} 

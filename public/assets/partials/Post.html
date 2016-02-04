@@ -1,0 +1,69 @@
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion"><span class="glyphicon glyphicon-file">
+                            </span>Post new Issue</a>
+                        </h4>
+                    </div>
+                   
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <input name="title" type="text" ng-model="title" class="form-control" placeholder="Title" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="content" ng-model="content" class="form-control" placeholder="Content" rows="5" required></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="tags">
+                                            Location</label>
+                                        <input type="text" class="form-control" id="Location" placeholder="Location" />
+                                    </div>
+                                </div>
+                            </div>
+                             <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="tags">
+                                            Select Lat Long on map</label>
+                                         <input type="text" class="form-control" id="lat" placeholder="lat" />
+                                        <input type="text" class="form-control" id="long" placeholder="long" />
+                                    </div>
+                                </div>
+                            </div>-->
+                                <div class="row">
+                                     <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="tags">
+                                            Tags</label>
+                                        <input type="text" ng-model="tags" name="tags" class="form-control" id="tags" placeholder="Tags" />
+                                    </div>
+                                     </div>
+                                </div>
+                                
+                                                   
+                                <div class="row">
+                                    <div class="col-md-2">
+                                            <a class="btn btn-success btn-sm" ng-click="saveIssue()">
+                                                <span class="glyphicon glyphicon-floppy-disk"></span>Save</a>
+                                           
+                                    </div>
+                                    <div>
+                                            <a class="btn btn-warning btn-sm" href="#/issues">
+                                                <span class="glyphicon glyphicon-floppy-disk"></span>Cancel</a>
+                                           
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+               
+           

@@ -1,0 +1,76 @@
+<div class="row">
+    <ul class="ds-btn">
+        <li>
+             <a class="btn btn-sm btn-info" id="Issues" href="./#/issues" >
+          <i class=" glyphicon glyphicon-bullhorn pull-left"></i><span>Issues<br></span></a> 
+            
+        </li>
+        <li>
+             <a class="btn btn-sm" id="Events" href="./#/events" >
+          <i class="glyphicon glyphicon-bell pull-left"></i><span>Events<br></span></a> 
+            
+        </li>
+        <li>
+             <a class="btn btn-sm" id="Services" href="./#/services" >
+         <i class="glyphicon glyphicon-globe pull-left"></i><span>Services<br></span></a> 
+            
+        </li>
+    </ul>
+   
+</div>
+<div class="row">
+    <div>
+        <a class="btn btn-sm btn-success"  id="addIssuesButton" href="./#/postNews" style="float:right;">
+            <i class=" glyphicon glyphicon-plus pull-left"></i><span>Report an issue<br></span>  
+        </a> 
+        <div class="feed_stacked corgi_feed_well" ng-repeat="news in help">
+          <div class="feed_item">
+            <div class="feed_body">
+              <div class="row">
+                <div class="feed_profile_pic">
+                  <img src="assets/images/avatar2.png" alt="meta image" class="meta_image" />
+                  {{news.created_by}}
+                </div>
+                <div class="feed_text">
+                  <h4><a href="./#/issueDetails/{{news._id}}" > {{news.title}} </a></h4>
+                  <small class="text-muted"> {{news.created_at | date:'MMM-d-yyyy h:mm'}} <span class="glyphicon glyphicon-time"></span></small>
+                  <p>{{news.description}}</p>
+                </div>
+              </div>
+              <div  class="row">
+                    <p>{{news.user}}</p>
+               </div>
+            </div>
+
+            <hr class="feed_hr">
+            <ul class="chat" style="padding: 20px">
+                    <li class="left clearfix" ng-repeat="comment in news.comments"><span class="chat-img pull-left" >
+                        <img src="assets/images/avatar5.png" alt="User Avatar" class="img-circle" style="width: 40px;"/>
+                    </span>
+                        <div class="chat-body clearfix">
+                            <div class="header">
+                                <strong class="primary-font">{{comment.created_by}}</strong> <small class="pull-right text-muted"> {{comment.created_at | date:'MMM-d-yyyy h:mm'}}
+                                    <span class="glyphicon glyphicon-time"></span></small>
+                            </div>
+                            <p>
+                               {{comment.desc}}
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="panel-footer">
+                <div class="input-group">
+                    <input id="btn-input" type="text" ng-model="comment" class="form-control input-sm" placeholder="Type your message here..." />
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning btn-sm" id="btn-chat" ng-click="addComment(news)">
+                            Comment</button>
+                    </span>
+                </div>
+            </div>
+           
+          </div>
+        </div>
+    </div>
+</div>
+
