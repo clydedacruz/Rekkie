@@ -286,13 +286,16 @@
                   console.log(MapsLib.getlatlong());
                   console.log(MapsLib.getlatlong().G);
                   console.log('http://www.virtourist.com/asia/india/goa/imatges/17.jpg');
+                    var myContextPath =location.href;
+                var cp = myContextPath.substring(0, myContextPath.indexOf("/index"));
+window.localStorage.setItem('contextpath', cp);
                   window.localStorage.setItem('radius', $.address.parameter('radius')/1000);
                   window.localStorage.setItem('url',  $('#urlValue').val());
                   window.localStorage.setItem('lat', MapsLib.getlatlong().K);
                   window.localStorage.setItem('long', MapsLib.getlatlong().G);
                   window.localStorage.setItem('address', $.address.parameter('address'));
 
-     window.location.replace("http://localhost:3000/#/home");
+     window.location.replace(cp+"/#/home");
                 });
             });
 

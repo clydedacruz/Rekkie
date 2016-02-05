@@ -247,12 +247,13 @@ angular.module('rekkie').controller('homeController',
 		     var lon=window.localStorage.getItem('lat');  
 		     var lat=window.localStorage.getItem('long');  
 		     var url=window.localStorage.getItem('url');  
+              var contextpath=window.localStorage.getItem('contextpath'); 
 		     console.log(window.localStorage.getItem('address'));  
 		     
 		     var request = $http({
 	                cache: true,
 	                method: "post",
-	                url: "http://localhost:3000/getPlaces",
+	                url: contextpath+"/getPlaces",
 	                params: {
 	            	    lat: lat,
 	            	    lon: lon,
