@@ -1,5 +1,5 @@
 angular.module('rekkie').controller('homeController',
-		[ '$scope', '$timeout','$localStorage','$http', function($scope, $timeout,$localStorage,$http) {
+		[ '$scope', '$timeout','$localStorage','$http','$rootScope','$location', function($scope, $timeout,$localStorage,$http,$rootScope,$location) {
 
 	
 			
@@ -248,8 +248,20 @@ angular.module('rekkie').controller('homeController',
 		     var lat=window.localStorage.getItem('long');  
 		     var url=window.localStorage.getItem('url');  
               var contextpath=window.localStorage.getItem('contextpath'); 
+		   // var contextpath="http://10.244.8.54:3000"; 
+		     
 		     console.log(window.localStorage.getItem('address'));  
 		     
+
+		          $scope.active=true;
+
+
+
+		        
+
+		           
+
+		          
 		     var request = $http({
 	                cache: true,
 	                method: "post",
@@ -264,9 +276,17 @@ angular.module('rekkie').controller('homeController',
 	            request.then(function(response) {
 	            	console.log("success");
 	                console.log(response);
+	                $scope.active=false;
+	                $scope.err=response.data.err;
 	                $scope.travelList=response.data.hits.hits;
 	            }, function(response) {
 	            	 console.log(response);
+	            	 $scope.active=false;
 	            });
+	            
+	            $scope.imageClicked=function(detail){
+	            	$rootScope.details=detail;
+	            	 $location.path( "/main" );
+	            }
 
 		} ]);

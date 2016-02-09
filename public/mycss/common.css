@@ -19,3 +19,116 @@ ul.fullsizelist{
     left:0;
     transition:  left .8s ease;
 }
+
+
+/* for testing purposes */
+
+body {
+
+  margin:80px 10px;
+
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-size: 13px;
+
+  line-height: 18px;
+
+  color: #333333;
+
+  background-color: #ffffff;
+
+}
+
+
+.box {
+
+  padding:20px;
+
+  border:1px solid #000;
+
+  position:relative;
+
+}
+
+
+.small {
+
+  width:200px;
+
+  height:200px;
+
+}
+
+
+.medium {
+
+  width:500px;
+
+  height:350px;
+
+}
+
+
+.large {
+
+  width:600px;
+
+  height:500px;
+
+}
+
+
+.sample {
+
+  float: left;
+
+  width: 270px;
+
+}
+
+
+/* custom loader styles */
+
+.custom-loading.dw-loading {
+
+  text-align: center;
+
+}
+
+
+.custom-loading.dw-loading.dw-loading-overlay {
+
+  background-color: rgba(0, 255, 255, .7);
+
+  z-index: 9999;
+
+}
+
+
+.custom-loading.dw-loading > .dw-loading-body > .dw-loading-text {
+
+  color: green;
+
+  font-size: 13px;
+
+  top: 45px;
+
+}
+
+#slides_control > div{
+  height: 200px;
+}
+/* img{ */
+/*   margin:auto; */
+/*   width: 400px; */
+/* } */
+#slides_control {
+  position:absolute;
+  width: 400px;
+  left:50%;
+  top:20px;
+ margin-left:-200px;
+}
+
+                
+

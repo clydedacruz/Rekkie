@@ -1,8 +1,10 @@
-var rekkie = angular.module('rekkie', ['ngRoute','angular-skycons','gaugejs','ui.bootstrap','ngStorage']);
+var rekkie = angular.module('rekkie', ['ngRoute','angular-skycons','gaugejs','ui.bootstrap','ngStorage','jkuri.gallery','treasure-overlay-spinner','ui.directives','ui.filters','ngAnimate']);
 
 
 rekkie.config(['$routeProvider', '$httpProvider', function($routeprovider, $httpProvider) {
-    //Enable cross domain calls
+    
+
+	//Enable cross domain calls
     $httpProvider.defaults.useXDomain = true;
 
     //Remove the header used to identify ajax call  that would prevent CORS from working

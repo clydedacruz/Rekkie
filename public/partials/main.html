@@ -79,11 +79,10 @@
 			<div class="dashboard_graph">
 
 				<div class="col-md-9 col-sm-9 col-xs-12">
-				<h3>Anjuna</h3>
+					<h3>{{details._source.name}}</h3>
 					<div class="product-image">
-						<img
-							src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Taj_Fort_Aguada_Beach_Resort_Hotel_Goa_3.JPG/500px-Taj_Fort_Aguada_Beach_Resort_Hotel_Goa_3.JPG"
-							height="400px" width="600px;" alt="..." />
+						<img ng-src="{{details._source.image}}" height="400px"
+							width="600px;" alt="..." />
 					</div>
 				</div>
 
@@ -95,18 +94,11 @@
 
 					<div class="col-md-12 col-sm-12 col-xs-6">
 						<div>
-							<p>Instagram Campaign</p>
-							<div class="">
-								<uib-progressbar animate="false" value="dynamic" type="success">
-								<b>{{dynamic}}%</b></uib-progressbar>
+							<p>Tags :</p>
+							<div ng-repeat="tags in details._source.tags">
+								<span class="label label-info">{{tags}}</span>
 							</div>
-						</div>
-						<div>
-							<p>Twitter Campaign</p>
-							<div class="">
-								<uib-progressbar animate="false" value="dynamic" type="success">
-								<b>{{dynamic}}%</b></uib-progressbar>
-							</div>
+
 						</div>
 					</div>
 					<div class="col-md-12 col-sm-12 col-xs-6">
@@ -126,18 +118,50 @@
 				<div class="clearfix"></div>
 			</div>
 		</div>
+		<div class="col-md-4 col-sm-4 col-xs-4">
+			<div class="dashboard_graph">
+			<h4>Rekkie Recommend</h4>
+				<div style="height: 305px">
+<!--     <uib-carousel interval="myInterval" no-wrap="noWrapSlides"> -->
+<!--       <uib-slide ng-repeat="slide in slides" active="slide.active" index="slide.id"> -->
+<!--         <img ng-src="{{slide.image}}" style="margin:auto;"> -->
+<!--         <div class="carousel-caption"> -->
+<!--           <h4>Slide {{slide.id}}</h4> -->
+<!--           <p>{{slide.text}}</p> -->
+<!--         </div> -->
+<!--       </uib-slide> -->
+<!--     </uib-carousel> -->
+<div id="Carousel" class="carousel slide">
+<ol class="carousel-indicators">
+    <li data-target="Carousel" data-slide-to="{{$index}}" ng-class='{active:$first}'  ng-repeat="slide in slides"></li>
+</ol>
+<div class="carousel-inner">
+    <div class="item" ng-class='{active:$first}' ng-repeat="slide in slides">
+        <img ng-src="{{slide._source.image}}" class="img-responsive" height="300px" width="300px">
+        <h4>{{slide._source.name}}</h4>
+    </div>
+</div>
+<span class="left carousel-control" data-target="#Carousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+</span>
+<span class="right carousel-control" data-target="#Carousel" data-slide="next">
+   <span class="glyphicon glyphicon-chevron-right"></span>
+</span>
+</div>
+  </div>
+			</div>
+		</div>
 
 	</div>
 
 	<br />
 
 	<div class="row">
-
-
 		<div class="col-md-6 col-sm-6 col-xs-12">
 			<div class="x_panel tile fixed_height_320">
 				<div class="x_title">
 					<h2>Information</h2>
+				
 					<ul class="nav navbar-right panel_toolbox">
 						<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 						</li>
@@ -153,10 +177,8 @@
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_content">
-					<p>
-                        Anjuna ([ɦɔɳzuɳẽ]) is a village in Goa, one of the twelve Brahmin comunidades of Bardez.
-Its church, St. Michael's Church, Anjuna, founded in 1595, is dedicated to S. Miguel, and celebrates the feasts of S. Miguel (September 29) and Nossa Senhora Advogada (second week of January). There are three large chapels in the parish: the one to S. Antonio (Praias), to Nossa Senhora de Saude (Mazalvaddo), and to Nossa Senhora de Piedade (Grande Chinvar). The chapel at Vagator became the church of the new parish of Vagator, dedicated to S. Antonio, in the twentieth century.
-                    </p>
+					<h4 ng-model="errWiki">{{errWiki}}</h4>
+					<p>{{wiki}}</p>
 
 				</div>
 			</div>
@@ -185,82 +207,22 @@ Its church, St. Michael's Church, Anjuna, founded in 1595, is dedicated to S. Mi
 					<div class="clearfix"></div>
 				</div>
 				<div class="x_content">
-					<div class="col-sm-12">
-						<div class="weather-text pull-right">
-							<h3 class="degrees">23</h3>
-						</div>
-					</div>
 					<div class="clearfix"></div>
 
 
 					<div class="row weather-days">
-						<div class="col-sm-2">
-							<div class="daily-weather">
-								<h2 class="day">Mon</h2>
-								<h3 class="degrees">25</h3>
-								<span> <skycon icon="CurrentWeather.forecast.icon"
-										size="CurrentWeather.forecast.iconSize"></skycon>
-									</canvas>
+						<div ng-repeat="tempVal in temps">
+							<div class="col-sm-2">
+								<div class="daily-weather">
+									<h2 class="day">{{tempVal.dayvalue}}</h2>
+									<h3 class="degrees">{{tempVal.temp.day}}</h3>
+									<span> <skycon icon="tempVal.iconvalue.icon"
+											size="tempVal.iconvalue.iconSize"></skycon>
+										</canvas>
 
-								</span>
-								<h5>
-									15 <i>km/h</i>
-								</h5>
-							</div>
-						</div>
-						<div class="col-sm-2">
-							<div class="daily-weather">
-								<h2 class="day">Tue</h2>
-								<h3 class="degrees">25</h3>
-								<skycon icon="CurrentWeather.forecast.icon"
-									size="CurrentWeather.forecast.iconSize"></skycon>
-								<h5>
-									12 <i>km/h</i>
-								</h5>
-							</div>
-						</div>
-						<div class="col-sm-2">
-							<div class="daily-weather">
-								<h2 class="day">Wed</h2>
-								<h3 class="degrees">27</h3>
-								<skycon icon="CurrentWeather.forecast.icon"
-									size="CurrentWeather.forecast.iconSize"></skycon>
-								<h5>
-									14 <i>km/h</i>
-								</h5>
-							</div>
-						</div>
-						<div class="col-sm-2">
-							<div class="daily-weather">
-								<h2 class="day">Thu</h2>
-								<h3 class="degrees">28</h3>
-								<skycon icon="CurrentWeather.forecast.icon"
-									size="CurrentWeather.forecast.iconSize"></skycon>
-								<h5>
-									15 <i>km/h</i>
-								</h5>
-							</div>
-						</div>
-						<div class="col-sm-2">
-							<div class="daily-weather">
-								<h2 class="day">Fri</h2>
-								<h3 class="degrees">28</h3>
-								<skycon icon="CurrentWeather.forecast.icon"
-									size="CurrentWeather.forecast.iconSize"></skycon>
-								<h5>
-									11 <i>km/h</i>
-								</h5>
-							</div>
-						</div>
-						<div class="col-sm-2">
-							<div class="daily-weather">
-								<h2 class="day">Sat</h2>
-								<h3 class="degrees">26</h3>
-								<skycon icon="CurrentWeather.forecast.icon"
-									size="CurrentWeather.forecast.iconSize"></skycon>
-								<h5>
-									10 <i>km/h</i>
-								</h5>
+									</span>
+									<h5>{{temp.temp.pressure}}</h5>
+								</div>
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -299,75 +261,17 @@ Its church, St. Michael's Church, Anjuna, founded in 1595, is dedicated to S. Mi
 					<div class="dashboard-widget-content">
 
 						<ul class="list-unstyled timeline widget">
-							<li>
+
+							<li ng-repeat="newsRes in news | limitTo:5">
 								<div class="block">
 									<div class="block_content">
 										<h2 class="title">
-											<a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+											<a>{{newsRes.url.title}}</a>
 										</h2>
 										<div class="byline">
-											<span>13 hours ago</span> by <a>Jane Smith</a>
+											<span>13 hours ago</span>
 										</div>
-										<p class="excerpt">
-											Film festivals used to be do-or-die moments for movie makers.
-											They were where you met the producers that could fund your
-											project, and if the buyers liked your flick, they’d pay to
-											Fast-forward and… <a>Read&nbsp;More</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="block">
-									<div class="block_content">
-										<h2 class="title">
-											<a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-										</h2>
-										<div class="byline">
-											<span>13 hours ago</span> by <a>Jane Smith</a>
-										</div>
-										<p class="excerpt">
-											Film festivals used to be do-or-die moments for movie makers.
-											They were where you met the producers that could fund your
-											project, and if the buyers liked your flick, they’d pay to
-											Fast-forward and… <a>Read&nbsp;More</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="block">
-									<div class="block_content">
-										<h2 class="title">
-											<a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-										</h2>
-										<div class="byline">
-											<span>13 hours ago</span> by <a>Jane Smith</a>
-										</div>
-										<p class="excerpt">
-											Film festivals used to be do-or-die moments for movie makers.
-											They were where you met the producers that could fund your
-											project, and if the buyers liked your flick, they’d pay to
-											Fast-forward and… <a>Read&nbsp;More</a>
-										</p>
-									</div>
-								</div>
-							</li>
-							<li>
-								<div class="block">
-									<div class="block_content">
-										<h2 class="title">
-											<a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
-										</h2>
-										<div class="byline">
-											<span>13 hours ago</span> by <a>Jane Smith</a>
-										</div>
-										<p class="excerpt">
-											Film festivals used to be do-or-die moments for movie makers.
-											They were where you met the producers that could fund your
-											project, and if the buyers liked your flick, they’d pay to
-											Fast-forward and… <a>Read&nbsp;More</a>
-										</p>
+										<p class="excerpt">{{newsRes.url.url}}</p>
 									</div>
 								</div>
 							</li>
@@ -409,16 +313,8 @@ Its church, St. Michael's Church, Anjuna, founded in 1595, is dedicated to S. Mi
 
 								<p>Media gallery</p>
 
-								<div class="col-md-55">
-									<div class="thumbnail">
-										<div class="image view view-first">
-											<img style="width: 100%; display: block;" ng-src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Taj_Fort_Aguada_Beach_Resort_Hotel_Goa_3.JPG/500px-Taj_Fort_Aguada_Beach_Resort_Hotel_Goa_3.JPG"
-												alt="" />
-										
-											
-										</div>
-										
-									</div>
+								<div class="">
+									<ng-gallery images="images"></ng-gallery>
 								</div>
 							</div>
 						</div>
@@ -431,9 +327,7 @@ Its church, St. Michael's Church, Anjuna, founded in 1595, is dedicated to S. Mi
 						<div class="col-md-12 col-sm-8 col-xs-12">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>
-										Tweets
-									</h2>
+									<h2>Tweets</h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i
 												class="fa fa-chevron-up"></i></a></li>
@@ -452,53 +346,10 @@ Its church, St. Michael's Church, Anjuna, founded in 1595, is dedicated to S. Mi
 
 									<div class="">
 										<ul class="to_do">
-											<li>
-												<p>
-													 Beaches around the world! |We do not own pictures posted| (Removal at owners request)
-												</p>
+											<li ng-repeat="tweet in tweets | limitTo:5">
+												<p>{{tweet.message.body}}</p>
 											</li>
-											<li>
-												<p>
-													 Watch out for photobombing seagulls when visiting Monifieth #Beach on the outskirts of #Dundee
-												</p>
-											</li>
-											<li>
-												<p>
-													 Experience an average day in #TelAviv and #discover the local rituals! http://bit.ly/1o71OI1  #Travel #Beach 
-												</p>
-											</li>
-											<li>
-												<p>
-													Check out #TelAviv Municipality's new website, which includes a live-stream of Tel Aviv #beach! http://www.tel-aviv.gov.il/en/ 
-												</p>
-											</li>
-											<li>
-												<p>
-													Cloudy start down the beach... #Saltburn #beach http://www.ianforsythphotographer.com  
-												</p>
-											</li>
-											<li>
-												<p>
-													Travel: Work at the Beach http://buff.ly/1SliIiN  #FutureOfWork #beach #wanderlust #startup
-												</p>
-											</li>
-											<li>
-												<p>
-													 Sun on the small waves.
 
-#Solent #Beach #Shoreline #Southsea #Portsmouth #longexposure #longexposurephotography 
-												</p>
-											</li>
-											<li>
-												<p>
-													Today's sunset view and sending reiki healing through this video :) #hawaii #oahu #honolulu #sunset #nature #beach 
-												</p>
-											</li>
-											<li>
-												<p>
-Rather unusual ? Bedouin #style #beach #restaurant in #Oman | #food #travel #wine @MrScottEddy @AnnTran_ @TedNguyen 
-												</p>
-											</li>
 										</ul>
 									</div>
 								</div>
@@ -527,8 +378,7 @@ Rather unusual ? Bedouin #style #beach #restaurant in #Oman | #food #travel #win
 			<footer>
 				<div class="">
 					<p class="pull-right">
-						. | <span
-							class="lead"> <i class="fa fa-paw"></i> Rekkie!
+						. | <span class="lead"> <i class="fa fa-paw"></i> Rekkie!
 						</span>
 					</p>
 				</div>
