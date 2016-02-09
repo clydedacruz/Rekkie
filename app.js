@@ -82,6 +82,7 @@ app.post('/getPlaces', function(req, res) {
 					
 					
 				var elasticApiBody ={
+					"from" : 0, "size" : 20,
 					"query": {
 						"filtered" : {
 							"query" : {
