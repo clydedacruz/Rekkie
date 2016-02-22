@@ -291,8 +291,8 @@
 window.localStorage.setItem('contextpath', cp);
                   window.localStorage.setItem('radius', $.address.parameter('radius')/1000);
                   window.localStorage.setItem('url',  $('#urlValue').val());
-                  window.localStorage.setItem('lat', MapsLib.getlatlong().K);
-                  window.localStorage.setItem('long', MapsLib.getlatlong().G);
+                  window.localStorage.setItem('lat', MapsLib.getlatlong().lat());
+                  window.localStorage.setItem('long', MapsLib.getlatlong().lng());
                   window.localStorage.setItem('address', $.address.parameter('address'));
 
      window.location.replace(cp+"/#/home");
