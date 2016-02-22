@@ -102,9 +102,10 @@ app.post('/getPlaces', function(req, res) {
 						}
 					}
 				}
-
+                console.log(elasticApiBody);
+                
 				request( elastic_url,{ json: true, body: elasticApiBody }, function (eerror, eresponse, ebody) {
-
+                    console.log(eresponse)
 					if (!eerror && eresponse.statusCode == 200) {
 
 						res.send(ebody)
