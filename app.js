@@ -94,8 +94,8 @@ app.post('/getPlaces', function(req, res) {
 								"geo_distance":{  
 									"distance":radius+"km",
 									"location":{
-										"lat" : lat,
-										"lon" : lon
+										"lat" : lon,
+										"lon" : lat
 									}
 								}
 							}
