@@ -45,7 +45,7 @@ app.post('/getPlaces', function(req, res) {
 	var alchamy_api_call="http://gateway-a.watsonplatform.net/calls/url/URLGetRankedImageKeywords?apikey="+api_key+"&outputMode="+outputMode+"&url="+image_url;
 
 
-	var elastic_url="https://hsg0hsxmx0:4mvnh7qyaw@destinations-6367418554.us-east-1.bonsai.io/travel/place/_search"
+	var elastic_url="http://hsg0hsxmx0:4mvnh7qyaw@destinations-6367418554.us-east-1.bonsai.io/travel/place/_search"
 
 	var lat=req.param('lat');
 	var lon=req.param('lon');
