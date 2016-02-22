@@ -102,7 +102,7 @@ app.post('/getPlaces', function(req, res) {
 						}
 					}
 				}
-                console.log(elasticApiBody);
+                console.log(JSON.stringify(elasticApiBody));
                 
 				request( elastic_url,{ json: true, body: elasticApiBody }, function (eerror, eresponse, ebody) {
                     console.log(eresponse)
